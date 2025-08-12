@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   private readonly http= inject(HttpClient)
-  private readonly baseUrl = 'http://localhost:3000/products'
+  private readonly baseUrl = 'https://e-commerce-deploy-backend-20j6.onrender.com/products'
   getAll():Observable<PM[]>{
     return this.http.get<PM[]>(this.baseUrl)
   }

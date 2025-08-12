@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class Purchase {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/purchase';
+  private readonly baseUrl = 'https://e-commerce-deploy-backend-20j6.onrender.com/purchase';
 
   save(savePurchaseDto: SavePurchaseDto): Observable<{ message: string }> {
     return this.http.post<{ message: string }>(

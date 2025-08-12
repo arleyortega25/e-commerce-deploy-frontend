@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PaymentService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/payment';
+  private readonly baseUrl = 'https://e-commerce-deploy-backend-20j6.onrender.com/payment';
 
   checkout(checkoutDto: CheckoutDto): Observable<{ url: string }> {
     return this.http.post<{ url: string }>(
